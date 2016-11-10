@@ -21,5 +21,20 @@ module Squizzes
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
+    config.time_zone = 'Brasilia'
+    config.i18n.locale = :'pt-BR'
+    config.i18n.default_locale = :'pt-BR'
+    config.i18n.available_locales = %i(pt-BR)
+    config.i18n.enforce_available_locales = true
+    config.generators do |g|
+      g.javascripts false
+      g.stylesheets false
+      g.helper false
+      # g.template_engine :slim
+      # g.test_framework :rspec,
+      #   view_specs: false,
+      #   helper_specs: false
+      # g.factory_girl true
+    end
   end
 end
